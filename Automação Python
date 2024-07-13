@@ -1,0 +1,80 @@
+#Passo 1 - entrar no sistema da empresa
+#link: https://dlp.hashtagtreinamentos.com/python/intensivao
+#Passo 2 - fazer login
+#Passo 3 - importar a base de dados
+#passo 4 - cadastrar um produto
+#passo 5 - repetir o passo 4 até cadastrar todos os produtos
+
+import pyautogui
+import time
+# pyautogui.click - clicar com o mouse
+# pyautogui.write - escrever um texto
+# pyautogui.press - para pressionar uma tecla
+# pyautogui.hotkey - combinação de teclas (Ctrl C)
+# pyautogui.scroll - rolar a tecla para cima ou para baixo
+
+# passo - 1 entrar no sitema
+# abrir o navegador
+pyautogui.PAUSE = 0.5
+pyautogui.press("win")
+pyautogui.write("opera")
+pyautogui.press("enter")
+ # entrar no site
+pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
+pyautogui.press("enter")
+
+time.sleep(3)
+#fazer login
+pyautogui.click(x=-1009, y=499)
+pyautogui.hotkey("ctrl","a")
+pyautogui.write("durj2004@gmail.com")
+#passar para senha
+pyautogui.press("tab")
+pyautogui.write("36984450fv")
+#passar para login
+pyautogui.press("tab")
+pyautogui.press("enter")
+#passo - 2 importar a base de dados
+
+import pandas
+
+tabela = pandas.read_csv("dados.csv")
+print(tabela)
+for linha in tabela.index:
+
+#Cadastrar os produtos
+    pyautogui.click(x=-1021, y=385)
+    codigo = str (tabela.loc[linha,"codigo"])
+    pyautogui.write(codigo)
+    #marca
+    pyautogui.press("tab")
+    marca = str(tabela.loc[linha,"marca"])
+    pyautogui.write(marca)
+    #tipo
+    pyautogui.press("tab")
+    tipo = str(tabela.loc[linha,"tipo"])
+    pyautogui.write(tipo)
+    #categoria
+    pyautogui.press("tab")
+    categoria = str(tabela.loc[linha,"categoria"])
+    pyautogui.write(categoria)
+    #preco
+    pyautogui.press("tab")
+    preco = str(tabela.loc[linha,"preco_unitario"])
+    pyautogui.write(preco)
+    #custo
+    pyautogui.press("tab")
+    custo = str(tabela.loc[linha,"custo"])
+    pyautogui.write(custo)
+    #obs
+    pyautogui.press("tab")
+    obs = str(tabela.loc[linha,"obs"])
+    if obs != "nan":
+        pyautogui.write(obs)
+    #enviar
+    pyautogui.press("tab")
+    pyautogui.press("enter")
+    #voltar paraa o inicio
+    pyautogui.scroll(5000)
+
+
