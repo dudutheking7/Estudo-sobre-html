@@ -1,0 +1,122 @@
+<!DOCTYPE html> <html>
+ <meta chartset="utf-8">
+<title> Projeto Fagundes Developer </title>
+<nav>
+<body>
+<h1>Seja Bem-Vindo Ao Meu Projeto De Estudo </h1>
+</nav>
+<a href="#">Home</a>
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+<h2><strong>Primeiro parágrafo</strong></h2>
+<p><i>Este foi meu primeiro parágrafo, e está em itálico </i> </p>
+<h3>Estudo Sobre <i>LISTAS</i></h3>
+<ol> 
+<p>Exemplo de Lista Ordenada</p>
+<li>Primeiro Item</li>
+<li>Segundo Item</li>
+</ol>
+<p>Exemplo de Lista Não Ordenada</p>
+<ul>
+<li> Azul</li>
+<li> Amarelo</li>
+</ul>
+<h4> estudo sobre tabelas</h4>
+<table>
+<tr>
+<th>ITENS</th>
+<th>QUANTIDADE</th>
+<th>TOTAL</th>
+</tr>
+<tr>
+<td> REGISTRO 01</td>
+<td>3</td>
+<td>$30</td>
+</tr>
+<tr>
+<td>REGISTRO 02</td>
+<td>2</td>
+<td>$30</td>
+</tr>
+</table>
+<h5> Exemplo De Tabela Com Cabeçalho e Rodapé </h5>
+<table width="100%" border="1" >
+<thead>
+<tr>
+<th>Mês</th>
+<th>Horas/Aulas</th>
+</tr> <tbody> <tr>
+<td>Junho</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Julho</td>
+<td>50</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>Total</th>
+<th>100</th>
+</tr>
+</tfoot>
+</table>
+<br>
+<h1>Estudo Sobre Formulários</h1>
+<form action="/pagina-processa-dados-do-form" method="post">
+<fieldset>
+<legend>Dados Gerais</legend>
+<label for="nome">Nome: </label>
+<input type="text" minlength="3"
+id:"nome" />
+<label for="data_nascimento">Data De Nascimento:</label>
+<input type="date"
+id="data_nascimento" />
+<label for="cpf">CPF:</label>
+<input type="text" minlength="11"
+id:"cpf" />
+</fieldset>
+<fieldset>
+<legend>Endereço</legend>
+<label for="tipo_endereço">Tipo:</label>
+<select id="tipo_endereço">
+<option
+value="">Selecione</option>
+<option value="">Rua</option>
+<option value="">Estrada</option>
+<option value="">Rodovia</option>
+<option value="">Outros</option>
+</select>
+<label 
+for="logradouro_endereco">logradouro:</label>
+<input type:"text"
+id:"logradouro_endereco"/>
+<label for="numero_endereco">Número:</label>
+<input type:"text"
+id:"numero_endereco"/>
+<label for="complemento_endereco">Complemento:</label>
+<input type="text"
+id:"complemento_endereco"/>
+</fieldset>
+<fieldset>
+<legend>Fale Conosco</legend>
+<label for="msg">Mensagem:</label>
+<textarea type="text" minlength="10"
+id:"msg"/>
+</textarea>
+</fieldset>
+<fieldset>
+<button type="submit">Enviar Sua Mensagem</button>
+<button type="reset">Limpar o Formulário</button>
+</fieldset>
+</form>
+<form action="processa-dados-do-form" method="post">
+<fieldset>
+<legend>Seu contato</legend>
+<label for="ctt">Celular:</label>
+<input type="number" minlength="10" required
+id:"ctt"/>
+</fieldset>
+</form>
+</body>
+</html>
